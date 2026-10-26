@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "somnia-funding-rate-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Somnia Network",
+        "PROJECT_TICKER": "SOMFUND"
+      },
+      "tools": [
+        {
+          "name": "verify_somfund_invariants",
+          "description": "Verifies deterministic invariants for Somnia Funding Rate AI on Somnia Network."
+        },
+        {
+          "name": "execute_somfund_action",
+          "description": "Executes authenticated DeFi state transition."
+        }
+      ]
+    }
+  }
+}
